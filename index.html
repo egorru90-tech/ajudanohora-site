@@ -1,516 +1,345 @@
 <!DOCTYPE html>
-
 <html lang="pt">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title data-i18n="site_title">Handyman Santarém — Canalização, Eletricidade, Reparações</title>
-<meta content="Handyman em Santarém: canalização, eletricidade e pequenas reparações. Orçamentos transparentes, garantia do trabalho e disponibilidade 7 dias/semana." name="description"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Handyman Santarém — Canalização, Eletricidade, Reparações</title>
+<meta name="description" content="Handyman em Santarém: canalização, eletricidade e pequenas reparações. Consulta gratuita; deslocação paga. Contacto preferencial por WhatsApp."/>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-    html { scroll-behavior: smooth; }
-    .glass { backdrop-filter: saturate(180%) blur(10px); background: rgba(255,255,255,.7); }
-    .flag { font-size: 18px; line-height: 1; }
-  </style>
+  html { scroll-behavior: smooth; }
+  .glass { backdrop-filter: saturate(180%) blur(10px); background: rgba(255,255,255,.7); }
+</style>
 </head>
 <body class="bg-slate-50 text-slate-800">
 <!-- Header -->
 <header class="sticky top-0 z-50 glass border-b border-slate-200">
-<div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
-<img alt="Logo" class="w-10 h-10 rounded-full ring-1 ring-slate-200" src="logo.webp"/>
-<div class="mr-auto">
-<div class="font-semibold text-slate-900">Georgii Shambarov</div>
-<div class="text-sm text-slate-500" data-i18n="subtitle">Canalização • Eletricidade • Reparações</div>
-</div>
-<nav class="hidden md:flex items-center gap-6 text-sm">
-<a class="hover:text-blue-700" data-i18n="nav_home" href="#home">Início</a>
-<a class="hover:text-blue-700" data-i18n="nav_prices" href="#prices">Preços</a>
-<a class="hover:text-blue-700" data-i18n="nav_request" href="#request">Pedir Visita</a>
-<a class="hover:text-blue-700" data-i18n="nav_about" href="#about">Sobre</a>
-<a class="hover:text-blue-700" data-i18n="nav_contacts" href="#contacts">Contactos</a>
-</nav>
-<!-- Lang switcher -->
-<div class="flex items-center gap-2">
-<button aria-label="Português" class="px-2 py-1 rounded border text-sm" id="ptBtn">🇵🇹 PT</button>
-<button aria-label="English" class="px-2 py-1 rounded border text-sm" id="enBtn">🇬🇧 EN</button>
-</div>
-<a class="hidden sm:inline-block ml-3 px-3 py-2 rounded-lg bg-blue-600 text-white text-sm hover:bg-blue-700" data-i18n="cta_request" href="#request">Pedir Visita</a>
-</div>
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+    <img src="logo.webp" alt="Logo" class="w-10 h-10 rounded-full ring-1 ring-slate-200"/>
+    <div class="mr-auto">
+      <div class="font-semibold text-slate-900">Georgii Shambarov</div>
+      <div class="text-sm text-slate-500">Canalização • Eletricidade • Reparações</div>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      <a class="hover:text-blue-700" href="#home">Início</a>
+      <a class="hover:text-blue-700" href="#prices">Preços</a>
+      <a class="hover:text-blue-700" href="#request">Pedir Visita</a>
+      <a class="hover:text-blue-700" href="#about">Sobre</a>
+      <a class="hover:text-blue-700" href="#contacts">Contactos</a>
+    </nav>
+    <a href="#request" class="hidden sm:inline-block ml-3 px-3 py-2 rounded-lg bg-blue-600 text-white text-sm hover:bg-blue-700">Pedir Visita</a>
+  </div>
 </header>
-<!-- HERO -->
-<section class="relative overflow-hidden" id="home">
-<div class="max-w-6xl mx-auto px-4 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center">
-<div>
-<h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 leading-tight">
-<span data-i18n="hero_title_1">Mão-de-obra de confiança</span><br/>
-<span class="text-blue-700" data-i18n="hero_title_2">em Santarém e arredores</span>
-</h1>
-<p class="mt-4 text-slate-600" data-i18n="hero_desc">
-          Especialista em canalização, eletricidade e pequenas reparações. Preços claros, resposta rápida e garantia sobre o serviço.
-        </p>
-<div class="mt-6 flex flex-wrap gap-3">
-<a class="px-5 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700" data-i18n="btn_request" href="#request">Pedir Visita</a>
-<a class="px-5 py-3 rounded-xl bg-white border border-slate-200 hover:border-blue-600 hover:text-blue-700" data-i18n="btn_prices" href="#prices">Ver Preços</a>
-</div>
-<ul class="mt-8 grid sm:grid-cols-3 gap-3 text-sm">
-<li class="p-4 bg-white border rounded-xl">
-<div class="font-semibold" data-i18n="adv_1_t">Atendimento rápido</div>
-<div class="text-slate-500" data-i18n="adv_1_d">Santarém e zonas próximas</div>
-</li>
-<li class="p-4 bg-white border rounded-xl">
-<div class="font-semibold" data-i18n="adv_2_t">Preço transparente</div>
-<div class="text-slate-500" data-i18n="adv_2_d">Mão-de-obra, sem materiais</div>
-</li>
-<li class="p-4 bg-white border rounded-xl">
-<div class="font-semibold" data-i18n="adv_3_t">Garantia</div>
-<div class="text-slate-500" data-i18n="adv_3_d">7 dias por semana</div>
-</li>
-</ul>
-</div>
-<div class="relative">
-<div class="aspect-square rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 flex items-center justify-center">
-<img alt="Logo" class="w-48 h-48 md:w-64 md:h-64 drop-shadow" src="logo.webp"/>
-</div>
-</div>
-</div>
-</section>
-<!-- PRICES -->
-<section class="py-14 bg-white" id="prices">
-<div class="max-w-6xl mx-auto px-4">
-<div class="flex items-center justify-between flex-wrap gap-3">
-<h2 class="text-2xl md:text-3xl font-bold" data-i18n="prices_title">Tabela de Preços (mão-de-obra)</h2>
-<div class="flex gap-3">
-<a class="px-4 py-2 rounded-lg border hover:bg-slate-50" data-i18n="download_pdf" download="" href="price-list-handyman.pdf">Descarregar PDF</a>
-<a class="px-4 py-2 rounded-lg border hover:bg-slate-50" data-i18n="download_docx" download="" href="price-list-handyman.docx">Descarregar DOCX</a>
-</div>
-</div>
-<p class="text-slate-500 mt-2 text-sm" data-i18n="prices_note">Os preços abaixo referem-se apenas à mão-de-obra. Materiais não incluídos.</p>
-<!-- Category Tabs -->
-<div class="mt-6 flex flex-wrap gap-2">
-<button class="cat-btn px-3 py-2 rounded-lg bg-blue-600 text-white text-sm" data-cat="plumbing">Plumbing</button>
-<button class="cat-btn px-3 py-2 rounded-lg bg-white border text-sm" data-cat="electrical">Electrical</button>
-<button class="cat-btn px-3 py-2 rounded-lg bg-white border text-sm" data-cat="repairs" data-i18n="repairs_tab">Cosmetic &amp; Minor Repairs</button>
-</div>
-<!-- Tables -->
-<div class="mt-6 space-y-10">
-<!-- Plumbing -->
-<div class="overflow-x-auto" id="tbl-plumbing">
-<table class="min-w-full text-sm">
-<thead class="bg-slate-100">
-<tr class="text-left">
-<th class="p-3" data-i18n="th_service">Serviço</th>
-<th class="p-3" data-i18n="th_price">Preço</th>
-</tr>
-</thead>
-<tbody class="divide-y">
-<tr><td class="p-3" data-i18n="p1">Reparação de fuga em tubo</td><td class="p-3">€35–56</td></tr>
-<tr><td class="p-3" data-i18n="p2">Substituição de torneira</td><td class="p-3">€28–49</td></tr>
-<tr><td class="p-3" data-i18n="p3">Substituição de autoclismo ou mecanismos</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="p4">Desentupimento de sanita / lavatório / ralo</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="p5">Instalação de tubagem nova</td><td class="p-3">€84–175</td></tr>
-<tr><td class="p-3" data-i18n="p6">Reparação de infiltração na casa de banho/parede</td><td class="p-3">€56–175</td></tr>
-<tr><td class="p-3" data-i18n="p7">Instalação de sifão</td><td class="p-3">€21–35</td></tr>
-<tr><td class="p-3" data-i18n="p8">Substituição de mangueira da sanita</td><td class="p-3">€18–28</td></tr>
-<tr><td class="p-3" data-i18n="p9">Instalação de lavatório</td><td class="p-3">€49–84</td></tr>
-<tr><td class="p-3" data-i18n="p10">Instalação de sanita</td><td class="p-3">€56–105</td></tr>
-<tr><td class="p-3" data-i18n="p11">Instalação de bidé</td><td class="p-3">€49–84</td></tr>
-<tr><td class="p-3" data-i18n="p12">Ligação de máquina de lavar roupa</td><td class="p-3">€28–42</td></tr>
-<tr><td class="p-3" data-i18n="p13">Ligação de máquina de lavar loiça</td><td class="p-3">€28–42</td></tr>
-<tr><td class="p-3" data-i18n="p14">Instalação de misturadora de banheira/duche</td><td class="p-3">€35–56</td></tr>
-<tr><td class="p-3" data-i18n="p15">Instalação de toalheiro aquecido</td><td class="p-3">€49–105</td></tr>
-<tr><td class="p-3" data-i18n="p16">Instalação de esquentador/aquecedor de água</td><td class="p-3">€70–126</td></tr>
-<tr><td class="p-3" data-i18n="p17">Substituição de torneira de corte (válvula de esfera)</td><td class="p-3">€18–35</td></tr>
-<tr><td class="p-3" data-i18n="p18">Instalação de tubagem de esgoto</td><td class="p-3">€105–175</td></tr>
-<tr><td class="p-3" data-i18n="p19">Instalação de filtro de água</td><td class="p-3">€28–56</td></tr>
-<tr><td class="p-3" data-i18n="p20">Instalação de cabine de duche</td><td class="p-3">€105–210</td></tr>
-</tbody>
-</table>
-</div>
-<!-- Electrical -->
-<div class="overflow-x-auto hidden" id="tbl-electrical">
-<table class="min-w-full text-sm">
-<thead class="bg-slate-100">
-<tr class="text-left"><th class="p-3" data-i18n="th_service">Serviço</th><th class="p-3" data-i18n="th_price">Preço</th></tr>
-</thead>
-<tbody class="divide-y">
-<tr><td class="p-3" data-i18n="e1">Substituição de tomada / interruptor</td><td class="p-3">€10–21</td></tr>
-<tr><td class="p-3" data-i18n="e2">Instalação/reparação de candeeiro</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="e3">Instalação de nova cablagem</td><td class="p-3">€84–140</td></tr>
-<tr><td class="p-3" data-i18n="e4">Reparação de curto-circuito</td><td class="p-3">€35–70</td></tr>
-<tr><td class="p-3" data-i18n="e5">Ligação de eletrodoméstico</td><td class="p-3">€42–84</td></tr>
-<tr><td class="p-3" data-i18n="e6">Substituição de disjuntor</td><td class="p-3">€21–35</td></tr>
-<tr><td class="p-3" data-i18n="e7">Instalação de diferencial (RCD)</td><td class="p-3">€35–70</td></tr>
-<tr><td class="p-3" data-i18n="e8">Deslocação de tomada/interruptor</td><td class="p-3">€18–35</td></tr>
-<tr><td class="p-3" data-i18n="e9">Instalação de tomada para fogão</td><td class="p-3">€28–49</td></tr>
-<tr><td class="p-3" data-i18n="e10">Instalação de caixa de derivação</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="e11">Ligação de termoacumulador/esquentador</td><td class="p-3">€42–70</td></tr>
-<tr><td class="p-3" data-i18n="e12">Instalação de focos (por unidade)</td><td class="p-3">€10–18</td></tr>
-<tr><td class="p-3" data-i18n="e13">Ligação de exaustor</td><td class="p-3">€28–49</td></tr>
-<tr><td class="p-3" data-i18n="e14">Diagnóstico da instalação elétrica</td><td class="p-3">€35–56</td></tr>
-<tr><td class="p-3" data-i18n="e15">Montagem/instalação de quadro elétrico</td><td class="p-3">€70–140</td></tr>
-<tr><td class="p-3" data-i18n="e16">Instalação de apliques/arandelas</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="e17">Substituição de casquilho</td><td class="p-3">€10–18</td></tr>
-<tr><td class="p-3" data-i18n="e18">Instalação de cabo de Internet/TV</td><td class="p-3">€21–49</td></tr>
-<tr><td class="p-3" data-i18n="e19">Instalação de temporizador / relé</td><td class="p-3">€28–56</td></tr>
-<tr><td class="p-3" data-i18n="e20">Instalação de cabo para ar condicionado</td><td class="p-3">€56–105</td></tr>
-</tbody>
-</table>
-</div>
-<!-- Repairs -->
-<div class="overflow-x-auto hidden" id="tbl-repairs">
-<table class="min-w-full text-sm">
-<thead class="bg-slate-100">
-<tr class="text-left"><th class="p-3" data-i18n="th_service">Serviço</th><th class="p-3" data-i18n="th_price">Preço</th></tr>
-</thead>
-<tbody class="divide-y">
-<tr><td class="p-3" data-i18n="r1">Pintura de paredes</td><td class="p-3">€35–63</td></tr>
-<tr><td class="p-3" data-i18n="r2">Massa e reparação de fissuras</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="r3">Colocação de pavimento laminado/vinílico</td><td class="p-3">€70–140</td></tr>
-<tr><td class="p-3" data-i18n="r4">Substituição de rodapé</td><td class="p-3">€14–28</td></tr>
-<tr><td class="p-3" data-i18n="r5">Instalação/reparação de porta</td><td class="p-3">€42–105</td></tr>
-<tr><td class="p-3" data-i18n="r6">Instalação de prateleira / armário</td><td class="p-3">€18–42</td></tr>
-<tr><td class="p-3" data-i18n="r7">Pintura de teto</td><td class="p-3">€35–84</td></tr>
-<tr><td class="p-3" data-i18n="r8">Reparação de estuque</td><td class="p-3">€28–56</td></tr>
-<tr><td class="p-3" data-i18n="r9">Colocação de azulejo</td><td class="p-3">€105–210</td></tr>
-<tr><td class="p-3" data-i18n="r10">Substituição de fechadura</td><td class="p-3">€18–35</td></tr>
-<tr><td class="p-3" data-i18n="r11">Montagem de móveis</td><td class="p-3">€28–56</td></tr>
-<tr><td class="p-3" data-i18n="r12">Fixação de quadros, espelhos, TV</td><td class="p-3">€14–35</td></tr>
-<tr><td class="p-3" data-i18n="r13">Acabamento com espuma/selante</td><td class="p-3">€14–28</td></tr>
-<tr><td class="p-3" data-i18n="r14">Instalação de porta interior</td><td class="p-3">€56–105</td></tr>
-<tr><td class="p-3" data-i18n="r15">Lixagem e pintura de portas/janelas</td><td class="p-3">€35–70</td></tr>
-<tr><td class="p-3" data-i18n="r16">Instalação de cornija de teto</td><td class="p-3">€18–35</td></tr>
-<tr><td class="p-3" data-i18n="r17">Substituição de guarnições (alizares)</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="r18">Colocação de papel de parede (por divisão)</td><td class="p-3">€70–140</td></tr>
-<tr><td class="p-3" data-i18n="r19">Ajuste de porta após colocação de pavimento</td><td class="p-3">€21–42</td></tr>
-<tr><td class="p-3" data-i18n="r20">Instalação de divisória em gesso cartonado</td><td class="p-3">€84–175</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<!-- REQUEST A VISIT -->
 
-<section class="py-20 bg-gray-50" id="request">
-<div class="container mx-auto px-4">
-<h2 class="text-3xl font-bold mb-6 text-center text-blue-700" data-i18n="request_title">Pedir uma Visita</h2>
-<p class="text-center max-w-xl mx-auto mb-8" data-i18n="request_sub">
+<!-- HERO -->
+<section id="home" class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+        Mão-de-obra de confiança <br/><span class="text-blue-700">em Santarém e arredores</span>
+      </h1>
+      <p class="mt-4 text-slate-600">Especialista em canalização, eletricidade e pequenas reparações. Preços claros, resposta rápida e garantia sobre o serviço.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#request" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">Pedir Visita</a>
+        <a href="https://wa.me/351969810207" target="_blank" class="px-5 py-3 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700">Falar no WhatsApp</a>
+      </div>
+      <div class="mt-6 p-5 bg-blue-50 border border-blue-200 rounded-2xl shadow-sm">
+        <p class="text-blue-800 font-medium">💬 Consulta e orçamento gratuitos (via WhatsApp ou pedido online). A deslocação é paga.</p>
+        <p class="text-slate-700 mt-1">📸 Preferencialmente envie fotos pelo WhatsApp — resposta mais rápida.</p>
+      </div>
+    </div>
+    <div class="flex justify-center items-center">
+      <img src="logo.webp" alt="Logo" class="w-56 h-56 drop-shadow"/>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section id="prices" class="py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold">Tabela de Preços (mão-de-obra)</h2>
+    <p class="text-slate-500 mt-2 text-sm">🧾 Clique na categoria para ver preços detalhados. Materiais não incluídos.</p>
+    <div class="mt-4 space-x-4">
+      <a class="px-4 py-2 rounded-lg border hover:bg-slate-50" download href="price-list-handyman.pdf">Descarregar PDF</a>
+      <a class="px-4 py-2 rounded-lg border hover:bg-slate-50" download href="price-list-handyman.docx">Descarregar DOCX</a>
+    </div>
+    <div class="mt-6 flex flex-wrap justify-center gap-4">
+      <button onclick="openPriceModal('plumbing')" class="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Plumbing</button>
+      <button onclick="openPriceModal('electrical')" class="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Electrical</button>
+      <button onclick="openPriceModal('repairs')" class="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Cosmetic & Minor Repairs</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE MODAL -->
+<div id="priceModalOverlay" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center" onclick="if(event.target.id==='priceModalOverlay')closePriceModal()">
+  <div class="bg-white p-6 rounded-2xl shadow-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto relative">
+    <button onclick="closePriceModal()" class="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl">✕</button>
+    <div id="priceModalBody"></div>
+  </div>
+</div>
+
+<!-- REQUEST A VISIT (original-like) -->
+<section id="request" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-6 text-center text-blue-700">Pedir uma Visita</h2>
+    <p class="text-center max-w-xl mx-auto mb-8">
       Preencha o formulário abaixo e entraremos em contacto o mais rápido possível.
     </p>
-<form action="https://formspree.io/f/xkgqzvpv" class="max-w-2xl mx-auto space-y-4 bg-white p-6 rounded-2xl shadow-md" method="POST">
-<div>
-<label class="block text-sm mb-1" data-i18n="f_name" for="name">Nome</label>
-<input class="w-full p-3 border rounded-lg" id="name" name="name" placeholder="João Silva" required="" type="text"/>
-</div>
-<div class="grid sm:grid-cols-2 gap-4">
-<div>
-<label class="block text-sm mb-1" data-i18n="f_phone" for="phone">Telefone</label>
-<input class="w-full p-3 border rounded-lg" id="phone" name="phone" placeholder="+351 969 810 207" required="" type="tel"/>
-</div>
-<div>
-<label class="block text-sm mb-1" data-i18n="f_email" for="email">Email (opcional)</label>
-<input class="w-full p-3 border rounded-lg" id="email" name="email" placeholder="nome@email.com" type="email"/>
-</div>
-</div>
-<div>
-<label class="block text-sm mb-1" data-i18n="f_address" for="addr">Morada / Local</label>
-<input class="w-full p-3 border rounded-lg" id="addr" name="address" placeholder="Santarém" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm mb-1" data-i18n="f_category" for="cat">Categoria</label>
-<select class="w-full p-3 border rounded-lg" id="cat" name="category">
-<option data-i18n="opt_plumbing" value="plumbing">Canalização</option>
-<option data-i18n="opt_electrical" value="electrical">Eletricidade</option>
-<option data-i18n="opt_repairs" value="repairs">Reparações</option>
-</select>
-</div>
-<div>
-<label class="block text-sm mb-1" data-i18n="f_desc" for="desc">Descrição do problema</label>
-<textarea class="w-full p-3 border rounded-lg" id="desc" name="description" required="" rows="4"></textarea>
-</div>
-<button class="w-full md:w-auto px-5 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700" data-i18n="btn_submit">
-        Enviar Pedido
-      </button>
-</form>
-</div>
+    <form action="https://formspree.io/f/xkgqzvpv" method="POST" class="max-w-2xl mx-auto space-y-4 bg-white p-6 rounded-2xl shadow-md">
+      <div>
+        <label class="block text-sm mb-1" for="name">Nome</label>
+        <input class="w-full p-3 border rounded-lg" id="name" name="name" placeholder="João Silva" required type="text"/>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm mb-1" for="phone">Telefone</label>
+          <input class="w-full p-3 border rounded-lg" id="phone" name="phone" placeholder="+351 969 810 207" required type="tel"/>
+        </div>
+        <div>
+          <label class="block text-sm mb-1" for="email">Email (opcional)</label>
+          <input class="w-full p-3 border rounded-lg" id="email" name="email" placeholder="nome@email.com" type="email"/>
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm mb-1" for="addr">Morada / Local</label>
+        <input class="w-full p-3 border rounded-lg" id="addr" name="address" placeholder="Santarém" required type="text"/>
+      </div>
+      <div>
+        <label class="block text-sm mb-1" for="cat">Categoria</label>
+        <select class="w-full p-3 border rounded-lg" id="cat" name="category">
+          <option value="plumbing">Canalização</option>
+          <option value="electrical">Eletricidade</option>
+          <option value="repairs">Reparações</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm mb-1" for="desc">Descrição do problema</label>
+        <textarea class="w-full p-3 border rounded-lg" id="desc" name="description" rows="4" required></textarea>
+      </div>
+      <button class="w-full md:w-auto px-5 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700">Enviar Pedido</button>
+    </form>
+  </div>
 </section>
 
-<!-- ABOUT (minimal, sem biografia) -->
-<section class="py-14 bg-white" id="about">
-<div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
-<div>
-<h2 class="text-2xl md:text-3xl font-bold" data-i18n="about_title">Sobre o Serviço</h2>
-<p class="mt-2 text-slate-600" data-i18n="about_text">
-          Prestação de serviços de canalização, eletricidade e pequenas reparações em Santarém. Foco em qualidade, segurança e prazos curtos. Trabalhos com garantia.
-        </p>
-<ul class="mt-4 list-disc pl-5 text-slate-700 text-sm">
-<li data-i18n="about_list_1">Orçamento e aconselhamento por telefone/WhatsApp.</li>
-<li data-i18n="about_list_2">Materiais podem ser fornecidos pelo cliente ou adquiridos mediante acordo.</li>
-<li data-i18n="about_list_3">Trabalho aos fins de semana e à noite — mediante disponibilidade.</li>
-</ul>
-</div>
-<!-- Reviews -->
-<div>
-<div class="flex items-center justify-between">
-<h3 class="text-xl font-semibold" data-i18n="reviews_title">Avaliações de Clientes</h3>
-<span class="text-xs text-slate-500" data-i18n="reviews_note">Sem avaliações? Seja o primeiro.</span>
-</div>
-<ul class="mt-4 space-y-3" id="reviewsList"></ul>
-<form class="mt-5 bg-slate-50 p-4 rounded-xl border space-y-3" id="reviewForm">
-<div class="grid sm:grid-cols-2 gap-3">
-<input class="p-3 border rounded-lg" id="revName" placeholder="Nome" required="" type="text"/>
-<select class="p-3 border rounded-lg" id="revRate">
-<option value="5">★★★★★ (5)</option>
-<option value="4">★★★★☆ (4)</option>
-<option value="3">★★★☆☆ (3)</option>
-<option value="2">★★☆☆☆ (2)</option>
-<option value="1">★☆☆☆☆ (1)</option>
-</select>
-</div>
-<textarea class="w-full p-3 border rounded-lg" id="revText" placeholder="Comentário" required="" rows="3"></textarea>
-<button class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700" data-i18n="btn_add_review">Enviar avaliação</button>
-<p class="hidden text-green-600 text-sm" data-i18n="review_thanks" id="reviewMsg">Obrigado! A sua avaliação foi adicionada.</p>
-</form>
-</div>
-</div>
+<!-- ABOUT + REVIEWS (left text, right reviews form w/ localStorage as original) -->
+<section id="about" class="py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Sobre o Serviço</h2>
+      <p class="mt-2 text-slate-600 leading-relaxed">
+        Prestação de serviços de canalização, eletricidade e pequenas reparações em Santarém. Foco em qualidade, segurança e prazos curtos. Trabalhos com garantia.
+      </p>
+      <ul class="mt-4 list-disc pl-5 text-slate-700 text-sm">
+        <li>Orçamento e aconselhamento por telefone/WhatsApp.</li>
+        <li>Materiais podem ser fornecidos pelo cliente ou adquiridos mediante acordo.</li>
+        <li>Trabalho aos fins de semana e à noite — mediante disponibilidade.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="flex items-center justify-between">
+        <h3 class="text-xl font-semibold">Avaliações de Clientes</h3>
+        <span class="text-xs text-slate-500">Sem avaliações? Seja o primeiro.</span>
+      </div>
+      <ul class="mt-4 space-y-3" id="reviewsList"></ul>
+      <form class="mt-5 bg-slate-50 p-4 rounded-xl border space-y-3" id="reviewForm">
+        <div class="grid sm:grid-cols-2 gap-3">
+          <input class="p-3 border rounded-lg" id="revName" placeholder="Nome" required type="text"/>
+          <select class="p-3 border rounded-lg" id="revRate">
+            <option value="5">★★★★★ (5)</option>
+            <option value="4">★★★★☆ (4)</option>
+            <option value="3">★★★☆☆ (3)</option>
+            <option value="2">★★☆☆☆ (2)</option>
+            <option value="1">★☆☆☆☆ (1)</option>
+          </select>
+        </div>
+        <textarea class="w-full p-3 border rounded-lg" id="revText" placeholder="Comentário" required rows="3"></textarea>
+        <button class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Enviar avaliação</button>
+        <p class="hidden text-green-600 text-sm" id="reviewMsg">Obrigado! A sua avaliação foi adicionada.</p>
+      </form>
+    </div>
+  </div>
 </section>
+
 <!-- CONTACTS -->
 <section class="py-14" id="contacts">
-<div class="max-w-6xl mx-auto px-4">
-<h2 class="text-2xl md:text-3xl font-bold" data-i18n="contacts_title">Contactos</h2>
-<div class="mt-6 grid md:grid-cols-2 gap-8">
-<div class="bg-white p-6 border rounded-2xl">
-<ul class="space-y-2">
-<li><strong data-i18n="phone">Telefone</strong>: <a class="underline" href="tel:+351969810207">+351 969 810 207</a></li>
-<li><strong>Email</strong>: <a class="underline" href="mailto:Egor.ru90@gmail.com">Egor.ru90@gmail.com</a></li>
-<li><strong>WhatsApp</strong>: <a class="underline" href="https://wa.me/351969810207" target="_blank">wa.me/351969810207</a></li>
-<li><strong data-i18n="area">Área</strong>: Santarém</li>
-</ul>
-<button class="mt-4 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700" data-i18n="btn_callback" id="openCallback">Pedir Retorno</button>
-</div>
-<div class="h-72 md:h-full rounded-2xl overflow-hidden border">
-<iframe class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Santar%C3%A9m%2C%20Portugal&amp;z=11&amp;output=embed"></iframe>
-</div>
-</div>
-</div>
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold">Contactos</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 border rounded-2xl">
+        <ul class="space-y-2">
+          <li><strong>Telefone</strong>: <a class="underline" href="tel:+351969810207">+351 969 810 207</a></li>
+          <li><strong>Email</strong>: <a class="underline" href="mailto:ajudanohora@gmail.com">ajudanohora@gmail.com</a></li>
+          <li><strong>WhatsApp</strong>: <a class="underline" target="_blank" href="https://wa.me/351969810207">wa.me/351969810207</a></li>
+          <li><strong>Área</strong>: Santarém</li>
+        </ul>
+      </div>
+      <div class="h-72 md:h-full rounded-2xl overflow-hidden border">
+        <iframe class="w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Santar%C3%A9m%2C%20Portugal&z=11&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Footer -->
 <footer class="border-t bg-white">
-<div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center gap-4 justify-between">
-<div class="text-sm text-slate-500">© <span id="year"></span> Georgii Shambarov. <span data-i18n="rights">Todos os direitos reservados.</span></div>
-<div class="flex items-center gap-4 text-sm">
-<a class="hover:text-blue-700" href="tel:+351969810207">+351 969 810 207</a>
-<a class="hover:text-blue-700" href="mailto:Egor.ru90@gmail.com">Egor.ru90@gmail.com</a>
-<a class="hover:text-blue-700" href="https://wa.me/351969810207" target="_blank">WhatsApp</a>
-</div>
-</div>
+  <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center gap-4 justify-between">
+    <div class="text-sm text-slate-500">© <span id="year"></span> Georgii Shambarov. Todos os direitos reservados.</div>
+    <div class="flex items-center gap-4 text-sm">
+      <a class="hover:text-blue-700" href="tel:+351969810207">+351 969 810 207</a>
+      <a class="hover:text-blue-700" href="mailto:ajudanohora@gmail.com">ajudanohora@gmail.com</a>
+      <a class="hover:text-blue-700" target="_blank" href="https://wa.me/351969810207">WhatsApp</a>
+    </div>
+  </div>
 </footer>
-<!-- Floating WhatsApp + Callback -->
-<a class="fixed right-4 bottom-4 z-40 px-4 py-3 rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700" href="https://wa.me/351969810207" target="_blank">WhatsApp</a>
-<button class="fixed right-4 bottom-20 z-40 px-4 py-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700" data-i18n="btn_callback" id="openCallbackFab">Pedir Retorno</button>
-<!-- Callback Modal -->
 
-<div class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" id="callbackModal">
-<div class="bg-white p-6 rounded-2xl shadow-lg max-w-md w-full relative">
-<button class="absolute top-3 right-3 text-gray-500 hover:text-gray-700" id="closeCallback">✕</button>
-<h3 class="text-xl font-semibold mb-4 text-center text-blue-700" data-i18n="callback_title">Pedido de Retorno</h3>
-<form action="https://formspree.io/f/xkgqzvpv" class="space-y-3" method="POST">
-<div>
-<label class="block text-sm mb-1" data-i18n="f_name" for="cbName">Nome</label>
-<input class="w-full p-3 border rounded-lg" id="cbName" name="name" placeholder="João Silva" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm mb-1" data-i18n="f_phone" for="cbPhone">Telefone</label>
-<input class="w-full p-3 border rounded-lg" id="cbPhone" name="phone" placeholder="+351 969 810 207" required="" type="tel"/>
-</div>
-<button class="w-full px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700" data-i18n="btn_request_call" type="submit">
-        Pedir chamada
-      </button>
-</form>
-</div>
-</div>
-
-<!-- JS: tabs, forms, i18n -->
 <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Price category tabs
-    const btns = document.querySelectorAll('.cat-btn');
-    const tabs = {
-      plumbing: document.getElementById('tbl-plumbing'),
-      electrical: document.getElementById('tbl-electrical'),
-      repairs: document.getElementById('tbl-repairs'),
-    };
-    btns.forEach(b => b.addEventListener('click', () => {
-      btns.forEach(x => x.classList.remove('bg-blue-600','text-white'));
-      btns.forEach(x => x.classList.add('bg-white','text-slate-800','border'));
-      b.classList.add('bg-blue-600','text-white');
-      b.classList.remove('bg-white','border');
-      const cat = b.dataset.cat;
-      Object.values(tabs).forEach(el => el.classList.add('hidden'));
-      tabs[cat].classList.remove('hidden');
-    }));
-
-    // Reviews localStorage
-    const list = document.getElementById('reviewsList');
-    const LS_KEY = 'gs_reviews';
-    function renderReviews() {
-      const items = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
-      list.innerHTML = items.map(r => `
-        <li class="p-4 bg-white border rounded-xl">
-          <div class="flex items-center justify-between">
-            <strong>${r.name}</strong>
-            <span class="text-yellow-500">${'★'.repeat(r.rate)}<span class="text-slate-300">${'★'.repeat(5-r.rate)}</span></span>
-          </div>
-          <p class="mt-1 text-sm text-slate-700">${r.text}</p>
-          <p class="mt-1 text-xs text-slate-400">${new Date(r.ts).toLocaleString()}</p>
-        </li>
-      `).join('');
-    }
+  // Reviews localStorage (from original logic)
+  const list = document.getElementById('reviewsList');
+  const LS_KEY = 'gs_reviews';
+  function renderReviews() {
+    const items = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+    list.innerHTML = items.map(r => `
+      <li class="p-4 bg-white border rounded-xl">
+        <div class="flex items-center justify-between">
+          <strong>${r.name}</strong>
+          <span class="text-yellow-500">${'★'.repeat(r.rate)}<span class="text-slate-300">${'★'.repeat(5-r.rate)}</span></span>
+        </div>
+        <p class="mt-1 text-sm text-slate-700">${r.text}</p>
+        <p class="mt-1 text-xs text-slate-400">${new Date(r.ts).toLocaleString()}</p>
+      </li>
+    `).join('');
+  }
+  renderReviews();
+  document.getElementById('reviewForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('revName').value.trim();
+    const rate = +document.getElementById('revRate').value;
+    const text = document.getElementById('revText').value.trim();
+    const items = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+    items.unshift({name, rate, text, ts: Date.now()});
+    localStorage.setItem(LS_KEY, JSON.stringify(items));
+    e.target.reset();
     renderReviews();
+    const msg = document.getElementById('reviewMsg');
+    msg.classList.remove('hidden'); setTimeout(()=>msg.classList.add('hidden'), 3000);
+  });
 
-    document.getElementById('reviewForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('revName').value.trim();
-      const rate = +document.getElementById('revRate').value;
-      const text = document.getElementById('revText').value.trim();
-      const items = JSON.parse(localStorage.getItem(LS_KEY) || '[]');
-      items.unshift({name, rate, text, ts: Date.now()});
-      localStorage.setItem(LS_KEY, JSON.stringify(items));
-      e.target.reset();
-      renderReviews();
-      const msg = document.getElementById('reviewMsg');
-      msg.classList.remove('hidden'); setTimeout(()=>msg.classList.add('hidden'), 3000);
-    });
+  // Price modal logic with FULL TABLES (+ hourly row)
+  const priceModalOverlay = document.getElementById('priceModalOverlay');
+  const priceModalBody = document.getElementById('priceModalBody');
 
-    // Callback modal
-    const modal = document.getElementById('callbackModal');
-    function openCb(){ modal.classList.remove('hidden'); }
-    function closeCb(){ modal.classList.add('hidden'); }
-    document.getElementById('openCallback').onclick = openCb;
-    document.getElementById('openCallbackFab').onclick = openCb;
-    document.getElementById('closeCallback').onclick = closeCb;
+  const hourlyRow = `<tr><td class="p-2 font-semibold">Serviço por hora (trabalhos diversos)</td><td class="p-2">€20–40/h</td></tr>`;
 
-    // I18N
-    const dict = {
-      en: {
-        site_title: "Handyman Santarém — Plumbing, Electrical, Minor Repairs",
-        subtitle: "Plumbing • Electrical • Repairs",
-        nav_home: "Home", nav_prices: "Prices", nav_request: "Request a Visit", nav_about: "About", nav_contacts: "Contacts",
-        hero_title_1: "Reliable handyman service", hero_title_2: "in Santarém and nearby",
-        hero_desc: "Specialist in plumbing, electrical work, and minor repairs. Clear pricing, quick response, and guaranteed work.",
-        btn_request: "Request a Visit", btn_prices: "View Prices",
-        adv_1_t: "Fast service", adv_1_d: "Santarém & nearby areas",
-        adv_2_t: "Transparent pricing", adv_2_d: "Labor only, no materials",
-        adv_3_t: "Guarantee", adv_3_d: "Available 7 days a week",
-        prices_title: "Price List (labor only)", prices_note: "Prices refer to labor only. Materials are not included.",
-        download_pdf: "Download PDF", download_docx: "Download DOCX",
-        repairs_tab: "Cosmetic & Minor Repairs",
-        th_service: "Service", th_price: "Price",
-        // Plumbing
-        p1: "Pipe leak repair", p2: "Faucet replacement", p3: "Toilet tank or fittings replacement",
-        p4: "Toilet / sink / drain unclogging", p5: "New pipe installation", p6: "Bathroom/wall leak repair",
-        p7: "Siphon installation", p8: "Toilet hose replacement", p9: "Sink installation",
-        p10: "Toilet installation", p11: "Bidet installation", p12: "Washing machine connection",
-        p13: "Dishwasher connection", p14: "Bath/shower mixer installation", p15: "Towel heater installation",
-        p16: "Water heater installation", p17: "Ball valve replacement", p18: "Sewer pipe installation",
-        p19: "Water filter installation", p20: "Shower cabin installation",
-        // Electrical
-        e1: "Socket / switch replacement", e2: "Light fixture installation/repair", e3: "New wiring installation",
-        e4: "Short-circuit repair", e5: "Household appliance connection", e6: "Circuit breaker replacement",
-        e7: "RCD installation", e8: "Socket/switch relocation", e9: "Stove socket installation",
-        e10: "Junction box installation", e11: "Water heater connection", e12: "Spotlights installation (per unit)",
-        e13: "Exhaust hood connection", e14: "Wiring diagnostics", e15: "Electrical panel assembly/installation",
-        e16: "Wall lamp / sconce installation", e17: "Lamp socket replacement", e18: "Internet/TV cable installation",
-        e19: "Timer / relay installation", e20: "Air conditioner cable installation",
-        // Repairs
-        r1: "Wall painting", r2: "Spackling / crack repair", r3: "Laminate/vinyl flooring",
-        r4: "Baseboard replacement", r5: "Door installation/repair", r6: "Shelf / cabinet installation",
-        r7: "Ceiling painting", r8: "Plaster repair", r9: "Tile installation",
-        r10: "Door lock replacement", r11: "Furniture assembly", r12: "Hanging pictures, mirrors, TV",
-        r13: "Foam / sealant finishing", r14: "Interior door installation", r15: "Sanding & painting doors/windows",
-        r16: "Ceiling cornice installation", r17: "Trim replacement", r18: "Wallpapering (per room)",
-        r19: "Door adjustment after floor installation", r20: "Drywall partition installation",
+  const tablePlumbing = `
+    <h3 class="text-xl font-bold mb-4 text-blue-700">Plumbing</h3>
+    <p class="text-sm text-slate-500 mb-2">Service • Price (labor only)</p>
+    <table class="min-w-full text-sm border">
+      <thead><tr class="bg-slate-100 text-left"><th class="p-2">Service</th><th class="p-2">Price</th></tr></thead>
+      <tbody class="divide-y">
+        ${hourlyRow}
+        <tr><td class="p-2">Pipe leak repair</td><td class="p-2">€35–55</td></tr>
+        <tr><td class="p-2">Faucet replacement</td><td class="p-2">€25–50</td></tr>
+        <tr><td class="p-2">Toilet tank or fittings replacement</td><td class="p-2">€20–40</td></tr>
+        <tr><td class="p-2">Toilet / sink / drain unclogging</td><td class="p-2">€20–40</td></tr>
+        <tr><td class="p-2">New pipe installation</td><td class="p-2">€85–175</td></tr>
+        <tr><td class="p-2">Bathroom/wall leak repair</td><td class="p-2">€55–175</td></tr>
+        <tr><td class="p-2">Siphon installation</td><td class="p-2">€20–35</td></tr>
+        <tr><td class="p-2">Toilet hose replacement</td><td class="p-2">€15–30</td></tr>
+        <tr><td class="p-2">Sink installation</td><td class="p-2">€50–85</td></tr>
+        <tr><td class="p-2">Toilet installation</td><td class="p-2">€55–105</td></tr>
+        <tr><td class="p-2">Bidet installation</td><td class="p-2">€50–85</td></tr>
+        <tr><td class="p-2">Washing machine connection</td><td class="p-2">€25–40</td></tr>
+        <tr><td class="p-2">Dishwasher connection</td><td class="p-2">€30–40</td></tr>
+        <tr><td class="p-2">Bath/shower mixer installation</td><td class="p-2">€35–55</td></tr>
+        <tr><td class="p-2">Towel heater installation</td><td class="p-2">€50–105</td></tr>
+        <tr><td class="p-2">Water heater installation</td><td class="p-2">€70–125</td></tr>
+        <tr><td class="p-2">Ball valve replacement</td><td class="p-2">€20–35</td></tr>
+        <tr><td class="p-2">Sewer pipe installation</td><td class="p-2">€105–175</td></tr>
+        <tr><td class="p-2">Water filter installation</td><td class="p-2">€30–55</td></tr>
+        <tr><td class="p-2">Shower cabin installation</td><td class="p-2">€105–210</td></tr>
+      </tbody>
+    </table>
+  `;
 
-        request_title: "Request a Visit", request_desc: "Fill out the form and I will contact you shortly.",
-        f_name: "Client name", f_phone: "Contact phone", f_email: "Email (optional)", f_address: "Address / location", f_category: "Work category",
-        f_desc: "Describe the problem or work required",
-        opt_plumbing: "Plumbing", opt_electrical: "Electrical", opt_repairs: "Repairs",
-        btn_submit: "Submit Request", thanks: "Thank you! We will contact you shortly.",
-        quick_contacts: "Quick contacts", area: "Service area", phone: "Phone",
-        gdpr: "By sending the form you agree to be contacted for a quote. No spam.",
+  const tableElectrical = `
+    <h3 class="text-xl font-bold mb-4 text-blue-700">Electrical</h3>
+    <p class="text-sm text-slate-500 mb-2">Service • Price (labor only)</p>
+    <table class="min-w-full text-sm border">
+      <thead><tr class="bg-slate-100 text-left"><th class="p-2">Service</th><th class="p-2">Price</th></tr></thead>
+      <tbody class="divide-y">
+        ${hourlyRow}
+        <tr><td class="p-2">Socket / switch replacement</td><td class="p-2">€10–20</td></tr>
+        <tr><td class="p-2">Light fixture installation/repair</td><td class="p-2">€20–45</td></tr>
+        <tr><td class="p-2">New wiring installation</td><td class="p-2">€85–140</td></tr>
+        <tr><td class="p-2">Short-circuit repair</td><td class="p-2">€35–70</td></tr>
+        <tr><td class="p-2">Household appliance connection</td><td class="p-2">€40–85</td></tr>
+        <tr><td class="p-2">Circuit breaker replacement</td><td class="p-2">€20–35</td></tr>
+        <tr><td class="p-2">RCD installation</td><td class="p-2">€35–70</td></tr>
+        <tr><td class="p-2">Socket/switch relocation</td><td class="p-2">€20–35</td></tr>
+        <tr><td class="p-2">Stove socket installation</td><td class="p-2">€30–50</td></tr>
+        <tr><td class="p-2">Junction box installation</td><td class="p-2">€20–45</td></tr>
+        <tr><td class="p-2">Water heater connection</td><td class="p-2">€40–70</td></tr>
+        <tr><td class="p-2">Spotlights installation (per unit)</td><td class="p-2">€10–20</td></tr>
+        <tr><td class="p-2">Exhaust hood connection</td><td class="p-2">€25–50</td></tr>
+        <tr><td class="p-2">Wiring diagnostics</td><td class="p-2">€35–55</td></tr>
+        <tr><td class="p-2">Electrical panel assembly/installation</td><td class="p-2">€70–140</td></tr>
+        <tr><td class="p-2">Wall lamp / sconce installation</td><td class="p-2">€20–45</td></tr>
+        <tr><td class="p-2">Lamp socket replacement</td><td class="p-2">€10–20</td></tr>
+        <tr><td class="p-2">Internet/TV cable installation</td><td class="p-2">€20–50</td></tr>
+        <tr><td class="p-2">Timer / relay installation</td><td class="p-2">€30–55</td></tr>
+        <tr><td class="p-2">Air conditioner cable installation</td><td class="p-2">€55–105</td></tr>
+      </tbody>
+    </table>
+  `;
 
-        about_title: "About the Service",
-        about_text: "Providing plumbing, electrical, and minor repair services in Santarém. Focus on quality, safety, and quick turnaround. All work guaranteed.",
-        about_list_1: "Estimates and advice via phone/WhatsApp.",
-        about_list_2: "Materials can be provided by the client or purchased by agreement.",
-        about_list_3: "Evenings and weekends — upon availability.",
-        reviews_title: "Client Reviews",
-        reviews_note: "No reviews yet? Be the first.",
-        btn_add_review: "Submit review", review_thanks: "Thanks! Your review was added.",
+  const tableRepairs = `
+    <h3 class="text-xl font-bold mb-4 text-blue-700">Cosmetic & Minor Repairs</h3>
+    <p class="text-sm text-slate-500 mb-2">Service • Price (labor only)</p>
+    <table class="min-w-full text-sm border">
+      <thead><tr class="bg-slate-100 text-left"><th class="p-2">Service</th><th class="p-2">Price</th></tr></thead>
+      <tbody class="divide-y">
+        ${hourlyRow}
+        <tr><td class="p-2">Wall painting</td><td class="p-2">€35–65</td></tr>
+        <tr><td class="p-2">Spackling / crack repair</td><td class="p-2">€20–45</td></tr>
+        <tr><td class="p-2">Laminate/vinyl flooring</td><td class="p-2">€70–140</td></tr>
+        <tr><td class="p-2">Baseboard replacement</td><td class="p-2">€15–30</td></tr>
+        <tr><td class="p-2">Door installation/repair</td><td class="p-2">€40–105</td></tr>
+        <tr><td class="p-2">Shelf / cabinet installation</td><td class="p-2">€15–40</td></tr>
+        <tr><td class="p-2">Ceiling painting</td><td class="p-2">€35–84</td></tr>
+        <tr><td class="p-2">Plaster repair</td><td class="p-2">€30–55</td></tr>
+        <tr><td class="p-2">Tile installation</td><td class="p-2">€105–210</td></tr>
+        <tr><td class="p-2">Door lock replacement</td><td class="p-2">€20–35</td></tr>
+        <tr><td class="p-2">Furniture assembly</td><td class="p-2">€30–55</td></tr>
+        <tr><td class="p-2">Hanging pictures, mirrors, TV</td><td class="p-2">€15–35</td></tr>
+        <tr><td class="p-2">Foam / sealant finishing</td><td class="p-2">€15–30</td></tr>
+        <tr><td class="p-2">Interior door installation</td><td class="p-2">€55–105</td></tr>
+        <tr><td class="p-2">Sanding & painting doors/windows</td><td class="p-2">€35–70</td></tr>
+        <tr><td class="p-2">Ceiling cornice installation</td><td class="p-2">€20–35</td></tr>
+        <tr><td class="p-2">Trim replacement</td><td class="p-2">€20–40</td></tr>
+        <tr><td class="p-2">Wallpapering (per room)</td><td class="p-2">€70–140</td></tr>
+        <tr><td class="p-2">Door adjustment after floor installation</td><td class="p-2">€20–40</td></tr>
+        <tr><td class="p-2">Drywall partition installation</td><td class="p-2">€85–175</td></tr>
+      </tbody>
+    </table>
+  `;
 
-        contacts_title: "Contacts",
-        btn_callback: "Request Callback", callback_title: "Callback Request", btn_request_call: "Request call", callback_thanks: "Thank you! We will call you soon.",
-        rights: "All rights reserved.",
-      },
-      pt: {
-        site_title: "Handyman Santarém — Canalização, Eletricidade, Reparações",
-        subtitle: "Canalização • Eletricidade • Reparações",
-        nav_home: "Início", nav_prices: "Preços", nav_request: "Pedir Visita", nav_about: "Sobre", nav_contacts: "Contactos",
-        hero_title_1: "Mão-de-obra de confiança", hero_title_2: "em Santarém e arredores",
-        hero_desc: "Especialista em canalização, eletricidade e pequenas reparações. Preços claros, resposta rápida e garantia sobre o serviço.",
-        btn_request: "Pedir Visita", btn_prices: "Ver Preços",
-        adv_1_t: "Atendimento rápido", adv_1_d: "Santarém e zonas próximas",
-        adv_2_t: "Preço transparente", adv_2_d: "Mão-de-obra, sem materiais",
-        adv_3_t: "Garantia", adv_3_d: "7 dias por semana",
-        prices_title: "Tabela de Preços (mão-de-obra)", prices_note: "Os preços referem-se apenas à mão-de-obra. Materiais não incluídos.",
-        download_pdf: "Descarregar PDF", download_docx: "Descarregar DOCX",
-        repairs_tab: "Reparações Cosméticas",
-        th_service: "Serviço", th_price: "Preço",
-
-        // Plumbing PT already in DOM
-        // Electrical PT already in DOM
-        // Repairs PT already in DOM
-
-        request_title: "Pedir uma Visita", request_desc: "Preencha o formulário e entrarei em contacto em breve.",
-        f_name: "Nome", f_phone: "Telefone", f_email: "Email (opcional)", f_address: "Morada / Local", f_category: "Categoria", f_desc: "Descrição do problema",
-        opt_plumbing: "Canalização", opt_electrical: "Eletricidade", opt_repairs: "Reparações",
-        btn_submit: "Enviar Pedido", thanks: "Obrigado! Entraremos em contacto em breve.",
-        quick_contacts: "Contactos rápidos", area: "Área", phone: "Telefone",
-        gdpr: "Ao enviar o formulário, aceita o contacto para orçamentação. Sem spam.",
-
-        about_title: "Sobre o Serviço",
-        about_text: "Prestação de serviços de canalização, eletricidade e pequenas reparações em Santarém. Foco em qualidade, segurança e prazos curtos. Trabalhos com garantia.",
-        about_list_1: "Orçamento e aconselhamento por telefone/WhatsApp.",
-        about_list_2: "Materiais podem ser fornecidos pelo cliente ou adquiridos mediante acordo.",
-        about_list_3: "Trabalho aos fins de semana e à noite — mediante disponibilidade.",
-        reviews_title: "Avaliações de Clientes",
-        reviews_note: "Sem avaliações? Seja o primeiro.",
-        btn_add_review: "Enviar avaliação", review_thanks: "Obrigado! A sua avaliação foi adicionada.",
-
-        contacts_title: "Contactos",
-        btn_callback: "Pedir Retorno", callback_title: "Pedido de Retorno", btn_request_call: "Pedir chamada", callback_thanks: "Obrigado! Ligaremos em breve.",
-        rights: "Todos os direitos reservados.",
-      },
-    };
-
-    function setLang(lang) {
-      document.documentElement.lang = (lang === 'en' ? 'en' : 'pt');
-      const strings = dict[lang];
-      document.title = strings.site_title;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (strings[key]) el.textContent = strings[key];
-      });
-      localStorage.setItem('gs_lang', lang);
-    }
-
-    // init language
-    const initial = localStorage.getItem('gs_lang') || 'pt';
-    setLang(initial);
-    document.getElementById('ptBtn').onclick = () => setLang('pt');
-    document.getElementById('enBtn').onclick = () => setLang('en');
-  </script>
+  function openPriceModal(category) {
+    const map = { plumbing: tablePlumbing, electrical: tableElectrical, repairs: tableRepairs };
+    priceModalBody.innerHTML = map[category] || '';
+    priceModalOverlay.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+  }
+  function closePriceModal() {
+    priceModalOverlay.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    priceModalBody.innerHTML = '';
+  }
+  window.openPriceModal = openPriceModal;
+  window.closePriceModal = closePriceModal;
+</script>
 </body>
 </html>
